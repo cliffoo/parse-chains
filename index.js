@@ -12,9 +12,9 @@ fs.readdirSync(chainsPath).forEach(chainFileName => {
   map[chainId] = name;
 });
 
-// Ganache is active, "CENNZnet old" isn't
+// "CENNZnet old" isn't active
 if (map["1337"] === "CENNZnet old" || map["1337"] === undefined) {
-  map["1337"] = "Ganache";
+  map["1337"] = "Dev Network";
 }
 
 // Write to file, entries ordered by chain id
